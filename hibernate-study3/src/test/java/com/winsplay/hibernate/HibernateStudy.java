@@ -22,7 +22,7 @@ public class HibernateStudy {
 	@Test
 	public void basicUsage(){
 		
-		SessionFactory sessionFactory = new Configuration().configure( new File("D:\\new_git\\hibernate-study\\src\\main\\resources\\META-INF\\hibernate.cfg.xml")).buildSessionFactory();
+		SessionFactory sessionFactory = new Configuration().configure( new File("D:\\java_git\\hibernate-study3\\src\\main\\resources\\META-INF\\hibernate.cfg.xml")).buildSessionFactory();
 		Session session = sessionFactory.openSession();
 
 		session.beginTransaction();
