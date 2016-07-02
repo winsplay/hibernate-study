@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.winsplay.hibernate.bean">
+
+	<class name="Emp" table="emp">
+		<id name="empno" column="empno">
+			<generator class="native"></generator>
+		</id>
+		
+		<property name="ename" column="ename"  />
+		<property name="salary" column="salary" />
+		
+		<!-- <many-to-one name="dept" column="deptno" /> -->
+		
+	</class>
+	
+	<class name="Dept" table="dept">
+		<id name="deptNo" column="deptno">
+			<generator class="native"></generator>
+		</id>	
+		
+		<property name="dName" column="dname" />
+	</class>
+	
+
+</hibernate-mapping>

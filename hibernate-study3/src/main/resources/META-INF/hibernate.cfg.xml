@@ -19,7 +19,9 @@
 		<property name="connection.pool_size">1</property>
 		<property name="current_session_context_class">thread</property>
 
-		<mapping class="com.winsplay.hibernate.bean.EmployeeBean" />
-
+		<mapping class="com.winsplay.hibernate.bean.Dept" />
+		<mapping class="com.winsplay.hibernate.bean.Emp" />
+		<!-- <mapping resource="META-INF/emp-mapping.xml"/> -->
+		
 	</session-factory>
 </hibernate-configuration>

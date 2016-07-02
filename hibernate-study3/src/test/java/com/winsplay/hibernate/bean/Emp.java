@@ -3,11 +3,13 @@ package com.winsplay.hibernate.bean;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-@Entity(name="emp")
-@Table
-public class EmployeeBean {
+@Entity
+@Table(name="emp")
+public class Emp {
 
 	@Id
 	@GeneratedValue
@@ -16,6 +18,19 @@ public class EmployeeBean {
 	private String ename;
 	private String salary;
 	
+	
+	@ManyToOne
+	@JoinColumn(name="DEPTNO")
+	private Dept dept;
+	
+
+	public Dept getDept() {
+		return dept;
+	}
+
+	public void setDept(Dept dept) {
+		this.dept = dept;
+	}
 	
 	public int getEmpno() {
 		return empno;
